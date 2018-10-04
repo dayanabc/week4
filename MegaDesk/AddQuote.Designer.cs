@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿namespace MegaDesk
 {
-    partial class MainMenu
+    partial class AddQuote
     {
         /// <summary>
         /// Required designer variable.
@@ -20,6 +20,16 @@
             base.Dispose(disposing);
         }
 
+        //private void cancelQuoteButton(object sender, EventArgs e)
+        //{
+           // var mainMenu = (MainMenu)Tag;
+           // mainMenu.Show();
+            //Close();
+        //}
+
+
+
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -31,10 +41,9 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "AddQuote";
         }
 
         #endregion
     }
 }
-
