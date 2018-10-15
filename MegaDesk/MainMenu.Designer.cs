@@ -1,6 +1,8 @@
-﻿namespace MegaDesk
+﻿using System;
+
+namespace MegaDesk
 {
-    partial class MegaDesk
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +31,9 @@
         private void InitializeComponent()
         {
             this.openAddQuoteButton = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.openViewQuoteButton = new System.Windows.Forms.Button();
+            this.openSearchQuotesButton = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -46,35 +48,39 @@
             this.openAddQuoteButton.UseVisualStyleBackColor = true;
             this.openAddQuoteButton.Click += new System.EventHandler(this.openAddQuoteButton_Click);
             // 
-            // button2
+            // openViewQuoteButton
             // 
-            this.button2.Location = new System.Drawing.Point(47, 99);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View Quotes";
-            this.button2.UseVisualStyleBackColor = true;
+            this.openViewQuoteButton.Location = new System.Drawing.Point(47, 99);
+            this.openViewQuoteButton.Name = "openViewQuoteButton";
+            this.openViewQuoteButton.Size = new System.Drawing.Size(150, 50);
+            this.openViewQuoteButton.TabIndex = 1;
+            this.openViewQuoteButton.Text = "View Quotes";
+            this.openViewQuoteButton.UseVisualStyleBackColor = true;
+            this.openViewQuoteButton.Click += new System.EventHandler(this.openViewQuoteButton_Click);
             // 
-            // button3
+            // openSearchQuotesButton
             // 
-            this.button3.Location = new System.Drawing.Point(47, 155);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Search Quotes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.openSearchQuotesButton.Location = new System.Drawing.Point(47, 155);
+            this.openSearchQuotesButton.Name = "openSearchQuotesButton";
+            this.openSearchQuotesButton.Size = new System.Drawing.Size(150, 50);
+            this.openSearchQuotesButton.TabIndex = 2;
+            this.openSearchQuotesButton.Text = "Search Quotes";
+            this.openSearchQuotesButton.UseVisualStyleBackColor = true;
+            this.openSearchQuotesButton.Click += new System.EventHandler(this.openSearchQuotesButton_Click);
             // 
-            // button4
+            // Exit
             // 
-            this.button4.Location = new System.Drawing.Point(47, 211);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(150, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Exit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.Exit.Location = new System.Drawing.Point(47, 211);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(150, 50);
+            this.Exit.TabIndex = 3;
+            this.Exit.Text = "Exit";
+            this.Exit.UseVisualStyleBackColor = true;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Image = global::MegaDesk.Properties.Resources.thRI4O6P2S;
             this.pictureBox3.Location = new System.Drawing.Point(239, 67);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(211, 175);
@@ -87,9 +93,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 361);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.openSearchQuotesButton);
+            this.Controls.Add(this.openViewQuoteButton);
             this.Controls.Add(this.openAddQuoteButton);
             this.Name = "MegaDesk";
             this.Text = "MegaDesk";
@@ -98,12 +104,14 @@
 
         }
 
+        
+
         #endregion
 
         private System.Windows.Forms.Button openAddQuoteButton;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button openViewQuoteButton;
+        private System.Windows.Forms.Button openSearchQuotesButton;
+        private System.Windows.Forms.Button Exit;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

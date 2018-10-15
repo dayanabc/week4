@@ -8,24 +8,49 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace MegaDesk
 {
-    public partial class MegaDesk : Form
+    public partial class MainMenu : Form
     {
-        public MegaDesk()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
         private void openAddQuoteButton_Click(object sender, EventArgs e)
         {
-            AddQuote addNewQuoteForm = new AddQuote();
-            addNewQuoteForm.Tag = this;
-            addNewQuoteForm.Show(this);
+            AddQuote addNewQuoteForm = new AddQuote(this);
+            //addNewQuoteForm.Tag = this;
+            addNewQuoteForm.Show();
+            Hide();
+
+        }
+
+        private void openViewQuoteButton_Click(object sender, EventArgs e)
+        {
+            ViewAllQuotes allQuotesForm  = new ViewAllQuotes();
+            allQuotesForm.Tag = this;
+            allQuotesForm.Show(this);
+            Hide();
+
+
+        }
+
+        private void openSearchQuotesButton_Click(object sender, EventArgs e)
+        {
+            SearchQuotes searchQuoteForm = new SearchQuotes();
+            searchQuoteForm.Tag = this;
+            searchQuoteForm.Show(this);
             Hide();
 
         }
 
 
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
