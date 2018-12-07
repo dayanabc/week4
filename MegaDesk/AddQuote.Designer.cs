@@ -68,14 +68,14 @@ namespace MegaDesk
             // 
             this.WidthSize.Location = new System.Drawing.Point(103, 135);
             this.WidthSize.Name = "WidthSize";
-            this.WidthSize.Size = new System.Drawing.Size(120, 20);
+            this.WidthSize.Size = new System.Drawing.Size(120, 22);
             this.WidthSize.TabIndex = 1;
             // 
             // DepthSize
             // 
             this.DepthSize.Location = new System.Drawing.Point(103, 178);
             this.DepthSize.Name = "DepthSize";
-            this.DepthSize.Size = new System.Drawing.Size(120, 20);
+            this.DepthSize.Size = new System.Drawing.Size(120, 22);
             this.DepthSize.TabIndex = 2;
             // 
             // labelNewQuote
@@ -91,7 +91,7 @@ namespace MegaDesk
             this.SurfaceLAbel.AutoSize = true;
             this.SurfaceLAbel.Location = new System.Drawing.Point(295, 137);
             this.SurfaceLAbel.Name = "SurfaceLAbel";
-            this.SurfaceLAbel.Size = new System.Drawing.Size(90, 13);
+            this.SurfaceLAbel.Size = new System.Drawing.Size(119, 17);
             this.SurfaceLAbel.TabIndex = 6;
             this.SurfaceLAbel.Text = "Surface  Material:";
             // 
@@ -100,7 +100,7 @@ namespace MegaDesk
             this.DepthLabel.AutoSize = true;
             this.DepthLabel.Location = new System.Drawing.Point(58, 180);
             this.DepthLabel.Name = "DepthLabel";
-            this.DepthLabel.Size = new System.Drawing.Size(39, 13);
+            this.DepthLabel.Size = new System.Drawing.Size(50, 17);
             this.DepthLabel.TabIndex = 7;
             this.DepthLabel.Text = "Depth:";
             // 
@@ -109,7 +109,7 @@ namespace MegaDesk
             this.WidthLabel.AutoSize = true;
             this.WidthLabel.Location = new System.Drawing.Point(58, 137);
             this.WidthLabel.Name = "WidthLabel";
-            this.WidthLabel.Size = new System.Drawing.Size(38, 13);
+            this.WidthLabel.Size = new System.Drawing.Size(48, 17);
             this.WidthLabel.TabIndex = 8;
             this.WidthLabel.Text = "Width:";
             // 
@@ -118,7 +118,7 @@ namespace MegaDesk
             this.DeliveryLabel.AutoSize = true;
             this.DeliveryLabel.Location = new System.Drawing.Point(336, 185);
             this.DeliveryLabel.Name = "DeliveryLabel";
-            this.DeliveryLabel.Size = new System.Drawing.Size(48, 13);
+            this.DeliveryLabel.Size = new System.Drawing.Size(63, 17);
             this.DeliveryLabel.TabIndex = 9;
             this.DeliveryLabel.Text = "Delivery:";
             // 
@@ -136,7 +136,7 @@ namespace MegaDesk
             // 
             this.drawerNum.Location = new System.Drawing.Point(389, 98);
             this.drawerNum.Name = "drawerNum";
-            this.drawerNum.Size = new System.Drawing.Size(42, 20);
+            this.drawerNum.Size = new System.Drawing.Size(42, 22);
             this.drawerNum.TabIndex = 11;
             // 
             // DrawerNlabel
@@ -144,7 +144,7 @@ namespace MegaDesk
             this.DrawerNlabel.AutoSize = true;
             this.DrawerNlabel.Location = new System.Drawing.Point(288, 105);
             this.DrawerNlabel.Name = "DrawerNlabel";
-            this.DrawerNlabel.Size = new System.Drawing.Size(96, 13);
+            this.DrawerNlabel.Size = new System.Drawing.Size(127, 17);
             this.DrawerNlabel.TabIndex = 12;
             this.DrawerNlabel.Text = "Number of Drawer:";
             // 
@@ -152,7 +152,7 @@ namespace MegaDesk
             // 
             this.NameInput.Location = new System.Drawing.Point(205, 61);
             this.NameInput.Name = "NameInput";
-            this.NameInput.Size = new System.Drawing.Size(100, 20);
+            this.NameInput.Size = new System.Drawing.Size(100, 22);
             this.NameInput.TabIndex = 13;
             // 
             // Namelabel
@@ -160,24 +160,34 @@ namespace MegaDesk
             this.Namelabel.AutoSize = true;
             this.Namelabel.Location = new System.Drawing.Point(114, 64);
             this.Namelabel.Name = "Namelabel";
-            this.Namelabel.Size = new System.Drawing.Size(85, 13);
+            this.Namelabel.Size = new System.Drawing.Size(113, 17);
             this.Namelabel.TabIndex = 14;
             this.Namelabel.Text = "Customer Name:";
             // 
             // ShippingInput
             // 
             this.ShippingInput.FormattingEnabled = true;
+            this.ShippingInput.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "7"});
             this.ShippingInput.Location = new System.Drawing.Point(390, 185);
             this.ShippingInput.Name = "ShippingInput";
-            this.ShippingInput.Size = new System.Drawing.Size(121, 21);
+            this.ShippingInput.Size = new System.Drawing.Size(121, 24);
             this.ShippingInput.TabIndex = 15;
             // 
             // MaterialInput
             // 
             this.MaterialInput.FormattingEnabled = true;
+            this.MaterialInput.Items.AddRange(new object[] {
+            "Oak",
+            "Laminate",
+            "Pine",
+            "Rosewood",
+            "Veneer"});
             this.MaterialInput.Location = new System.Drawing.Point(391, 137);
             this.MaterialInput.Name = "MaterialInput";
-            this.MaterialInput.Size = new System.Drawing.Size(121, 21);
+            this.MaterialInput.Size = new System.Drawing.Size(121, 24);
             this.MaterialInput.TabIndex = 16;
             // 
             // AddQuote

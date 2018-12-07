@@ -33,9 +33,10 @@
             // 
             // cancelViewButton
             // 
-            this.cancelViewButton.Location = new System.Drawing.Point(427, 344);
+            this.cancelViewButton.Location = new System.Drawing.Point(209, 440);
+            this.cancelViewButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelViewButton.Name = "cancelViewButton";
-            this.cancelViewButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelViewButton.Size = new System.Drawing.Size(100, 28);
             this.cancelViewButton.TabIndex = 0;
             this.cancelViewButton.Text = "cancel";
             this.cancelViewButton.UseVisualStyleBackColor = true;
@@ -43,10 +44,11 @@
             // 
             // ViewAllQuotes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.cancelViewButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
             this.ResumeLayout(false);

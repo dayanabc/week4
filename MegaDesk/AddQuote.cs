@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace MegaDesk
 {
@@ -22,59 +23,55 @@ namespace MegaDesk
             
             var materials = new List<Desk.DesktopMaterial>();
 
-            materials = Enum.GetValues(typeof(Desk.DesktopMaterial))
-                .Cast<Desk.DesktopMaterial>()
-                .ToList();
+            materials = Enum.GetValues(typeof(Desk.DesktopMaterial)).Cast<Desk.DesktopMaterial>().ToList();
+            MaterialInput.DataSource = materials;
         }
 
         private void cancelQuotesButton_Click(object sender, EventArgs e)
         {
-            
-            Close();
-        }
-
-
-        private void GetQuoteButton_Click(object sender, EventArgs e)
-        {
-            String strMaterial = MaterialInput.Text;
-            decimal ShipmentNum = Convert.ToDecimal(ShippingInput.Text);
-            string NameText = NameInput.Text;
-            decimal MaterialNum;
-               
-            if (strMaterial.Equals("oak"))
-            {
-                MaterialNum = 1;
-
-            }
-            else if (strMaterial.Equals("roseWood"))
-            {
-                MaterialNum = 2;
-            }
-            else if (strMaterial.Equals("venner"))
-            {
-                MaterialNum = 3;
-            }
-            else if (strMaterial.Equals("pine"))
-            {
-                MaterialNum = 4;
-            }
-            else if (strMaterial.Equals("laminate"))
-            {
-                MaterialNum = 5;
-            }
-            else
-            {
-                return;
-            }
-
-          
-
+            var mainMenu = new MainMenu();
+            mainMenu.Show();
         }
 
         private void AddQuote_FormClosed(object sender, FormClosedEventArgs e)
         {
             var mainMenu = new MainMenu();
             mainMenu.Show();
+        }
+
+        private void GetQuoteButton_Click(object sender, EventArgs e)
+        {
+            String matToString = MaterialInput.Text;
+            decimal ShipmentNum = Convert.ToDecimal(ShippingInput.Text);
+            string NameText = NameInput.Text;
+            decimal MaterialNum;
+            StreamWriter qfile;
+               
+            if (matToString.Equals("oak"))
+            {
+                MaterialNum = 1;
+
+            }
+            else if (matToString.Equals("roseWood"))
+            {
+                MaterialNum = 2;
+            }
+            else if (matToString.Equals("venner"))
+            {
+                MaterialNum = 3;
+            }
+            else if (matToString.Equals("pine"))
+            {
+                MaterialNum = 4;
+            }
+            else if (matToString.Equals("laminate"))
+            {
+                MaterialNum = 5;
+            }
+            else
+            {
+                MaterialNum = 1; 
+            }
         }
     }
 }
