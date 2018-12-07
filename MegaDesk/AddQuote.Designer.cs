@@ -43,15 +43,18 @@ namespace MegaDesk
             this.WidthLabel = new System.Windows.Forms.Label();
             this.DeliveryLabel = new System.Windows.Forms.Label();
             this.GetQuoteButton = new System.Windows.Forms.Button();
-            this.drawerNum = new System.Windows.Forms.NumericUpDown();
+            this.DrawerNum = new System.Windows.Forms.NumericUpDown();
             this.DrawerNlabel = new System.Windows.Forms.Label();
             this.NameInput = new System.Windows.Forms.TextBox();
             this.Namelabel = new System.Windows.Forms.Label();
-            this.ShippingInput = new System.Windows.Forms.ComboBox();
             this.MaterialInput = new System.Windows.Forms.ComboBox();
+            this.ShippingInput = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.WidthSize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepthSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drawerNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawerNum)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelQuotesButton
@@ -60,23 +63,53 @@ namespace MegaDesk
             this.cancelQuotesButton.Name = "cancelQuotesButton";
             this.cancelQuotesButton.Size = new System.Drawing.Size(75, 23);
             this.cancelQuotesButton.TabIndex = 0;
-            this.cancelQuotesButton.Text = "Cancel";
+            this.cancelQuotesButton.Text = "Back";
             this.cancelQuotesButton.UseVisualStyleBackColor = true;
             this.cancelQuotesButton.Click += new System.EventHandler(this.cancelQuotesButton_Click);
             // 
             // WidthSize
             // 
             this.WidthSize.Location = new System.Drawing.Point(103, 135);
+            this.WidthSize.Maximum = new decimal(new int[] {
+            96,
+            0,
+            0,
+            0});
+            this.WidthSize.Minimum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.WidthSize.Name = "WidthSize";
             this.WidthSize.Size = new System.Drawing.Size(120, 20);
             this.WidthSize.TabIndex = 1;
+            this.WidthSize.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             // 
             // DepthSize
             // 
             this.DepthSize.Location = new System.Drawing.Point(103, 178);
+            this.DepthSize.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.DepthSize.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.DepthSize.Name = "DepthSize";
             this.DepthSize.Size = new System.Drawing.Size(120, 20);
             this.DepthSize.TabIndex = 2;
+            this.DepthSize.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             // 
             // labelNewQuote
             // 
@@ -132,12 +165,22 @@ namespace MegaDesk
             this.GetQuoteButton.UseVisualStyleBackColor = true;
             this.GetQuoteButton.Click += new System.EventHandler(this.GetQuoteButton_Click);
             // 
-            // drawerNum
+            // DrawerNum
             // 
-            this.drawerNum.Location = new System.Drawing.Point(389, 98);
-            this.drawerNum.Name = "drawerNum";
-            this.drawerNum.Size = new System.Drawing.Size(42, 20);
-            this.drawerNum.TabIndex = 11;
+            this.DrawerNum.Location = new System.Drawing.Point(389, 98);
+            this.DrawerNum.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
+            this.DrawerNum.Name = "DrawerNum";
+            this.DrawerNum.Size = new System.Drawing.Size(42, 20);
+            this.DrawerNum.TabIndex = 11;
+            this.DrawerNum.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // DrawerNlabel
             // 
@@ -151,6 +194,7 @@ namespace MegaDesk
             // NameInput
             // 
             this.NameInput.Location = new System.Drawing.Point(205, 61);
+            this.NameInput.MaxLength = 50;
             this.NameInput.Name = "NameInput";
             this.NameInput.Size = new System.Drawing.Size(100, 20);
             this.NameInput.TabIndex = 13;
@@ -164,14 +208,6 @@ namespace MegaDesk
             this.Namelabel.TabIndex = 14;
             this.Namelabel.Text = "Customer Name:";
             // 
-            // ShippingInput
-            // 
-            this.ShippingInput.FormattingEnabled = true;
-            this.ShippingInput.Location = new System.Drawing.Point(390, 185);
-            this.ShippingInput.Name = "ShippingInput";
-            this.ShippingInput.Size = new System.Drawing.Size(121, 21);
-            this.ShippingInput.TabIndex = 15;
-            // 
             // MaterialInput
             // 
             this.MaterialInput.FormattingEnabled = true;
@@ -180,15 +216,57 @@ namespace MegaDesk
             this.MaterialInput.Size = new System.Drawing.Size(121, 21);
             this.MaterialInput.TabIndex = 16;
             // 
+            // ShippingInput
+            // 
+            this.ShippingInput.FormattingEnabled = true;
+            this.ShippingInput.Items.AddRange(new object[] {
+            "3",
+            "5",
+            "7"});
+            this.ShippingInput.Location = new System.Drawing.Point(390, 185);
+            this.ShippingInput.Name = "ShippingInput";
+            this.ShippingInput.Size = new System.Drawing.Size(121, 21);
+            this.ShippingInput.TabIndex = 15;
+            this.ShippingInput.Text = "3";
+            this.ShippingInput.SelectedIndexChanged += new System.EventHandler(this.ShippingInput_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(377, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 17;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(404, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 18);
+            this.label2.TabIndex = 18;
+            this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(288, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Visible = false;
+            // 
             // AddQuote
             // 
             this.ClientSize = new System.Drawing.Size(553, 403);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.MaterialInput);
             this.Controls.Add(this.ShippingInput);
             this.Controls.Add(this.Namelabel);
             this.Controls.Add(this.NameInput);
             this.Controls.Add(this.DrawerNlabel);
-            this.Controls.Add(this.drawerNum);
+            this.Controls.Add(this.DrawerNum);
             this.Controls.Add(this.GetQuoteButton);
             this.Controls.Add(this.DeliveryLabel);
             this.Controls.Add(this.WidthLabel);
@@ -200,9 +278,10 @@ namespace MegaDesk
             this.Controls.Add(this.cancelQuotesButton);
             this.Name = "AddQuote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddQuote_FormClosed);
+            this.Load += new System.EventHandler(this.AddQuote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.WidthSize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepthSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drawerNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DrawerNum)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,11 +301,14 @@ namespace MegaDesk
         private Label WidthLabel;
         private Label DeliveryLabel;
         private Button GetQuoteButton;
-        private NumericUpDown drawerNum;
+        private NumericUpDown DrawerNum;
         private Label DrawerNlabel;
         private TextBox NameInput;
         private Label Namelabel;
-        private ComboBox ShippingInput;
         private ComboBox MaterialInput;
+        private ComboBox ShippingInput;
+        private Label label1;
+        private Label label2;
+        private Label label3;
     }
 }

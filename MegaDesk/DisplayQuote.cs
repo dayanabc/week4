@@ -16,5 +16,16 @@ namespace MegaDesk
         {
             InitializeComponent();
         }
+        private void viewBack_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
+        }
+        private void finalQuote_Click(object sender, EventArgs e)
+
+        {
+
+        }
     }
 }

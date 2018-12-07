@@ -20,21 +20,18 @@ namespace MegaDesk
 
         private void openAddQuoteButton_Click(object sender, EventArgs e)
         {
-            AddQuote addNewQuoteForm = new AddQuote(this);
-            //addNewQuoteForm.Tag = this;
-            addNewQuoteForm.Show();
+            AddQuote addNewQuoteForm = new AddQuote();
+            addNewQuoteForm.Tag = this;
+            addNewQuoteForm.Show(this);
             Hide();
-
         }
 
         private void openViewQuoteButton_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes allQuotesForm  = new ViewAllQuotes();
-            allQuotesForm.Tag = this;
-            allQuotesForm.Show(this);
+            ViewAllQuotes viewQuoteForm = new ViewAllQuotes();
+            viewQuoteForm.Tag = this;
+            viewQuoteForm.Show(this);
             Hide();
-
-
         }
 
         private void openSearchQuotesButton_Click(object sender, EventArgs e)
@@ -43,7 +40,6 @@ namespace MegaDesk
             searchQuoteForm.Tag = this;
             searchQuoteForm.Show(this);
             Hide();
-
         }
 
 
