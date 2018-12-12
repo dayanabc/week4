@@ -30,10 +30,7 @@ namespace MegaDesk
         public SearchQuotes()
         {
             InitializeComponent();
-            //set default state
-            //comboSurfaceMaterial.SelectedIndex = 0:
-
-            //loadGrid();
+           
         }
         
 
@@ -80,7 +77,8 @@ namespace MegaDesk
 
         private void cancelSearchButton_Click(object sender, EventArgs e)
         {
-
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
             Close();
         }
         private void SearchQuotes_FormClosed(object sender, FormClosedEventArgs e)
@@ -92,16 +90,7 @@ namespace MegaDesk
 
         private void comboSurfaceMaterial_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*ComboBox combo = (ComboBox)sender;
-            if (comboSurfaceMaterial.SelectedIndex == 0)
-            {
-                //comboSurfaceMaterial.SelectedIndex = String.All;
-                //LoadGrid();
-            }
-            else
-            {
-                //LoadGrid(combo.SelectedItem.ToString());
-            }*/
+           
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -133,8 +122,8 @@ namespace MegaDesk
 
             string[] columns;
 
-            string matCase = comboSurfaceMaterial.SelectedValue.ToString();
-            switch (matCase)
+            string mat = comboSurfaceMaterial.SelectedValue.ToString();
+            switch (mat)
             {
                 case "Oak":
                     while (reader.EndOfStream == false)

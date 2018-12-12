@@ -118,5 +118,8 @@
   <ItemGroup>
     <None Include="Resources\thRI4O6P2S.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="quotes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
